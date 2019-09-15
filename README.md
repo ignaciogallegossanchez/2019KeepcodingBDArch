@@ -281,7 +281,7 @@ En GoogleCloud:
 El factor de replicación en los Datanodes es 2.
 
 
-#### Creación del cluster en GoogleCloud
+#### Creación del cluster en GoogleCloud
 
 Nos identificamos en los servicios de GoogleCloud y nos dirigimos a la sección de **BigData** donde elegiremos **Dataproc** y dentro del mismo **Clústeres**.
 
