@@ -328,12 +328,12 @@ Allí vemos las reglas actuales:
 
 En donde:
 
- * default-allow-icmp (<span style="color:red">Eliminar</span>): Permite ICMP a las máquinas. Lo eliminamos.
+ * default-allow-icmp (**<span style="color:red">Eliminar</span>**): Permite ICMP a las máquinas. Lo eliminamos.
  * default-allow-internal (<span style="color:green">Dejamos como está</span>): Permite conexiones entre las máquinas del cluster.
- * default-allow-rdp (<span style="color:red">Eliminar</span>): Permite RDP (Remote Desktop Protocol) desde cualquier sitio. La eliminamos
- * default-allow-ssh (<span style="color:orange">Modificar</span>): La modificaremos para permitir conexión solo desde nuestra IP. Para ello la establecemos en las IP origen editando la regla y poniendo \<nuestra-ipv4\>/32 (sólo nuestra IP).
- * default-yarnweb-8088 (<span style="color:green">Crear</span>): Creamos una regla para permitir conexión al puerto TCP 8088 (consola de gestión de YARN) desde nuestra IP.
- * default-hdfsweb-9870 (<span style="color:green">Crear</span>): Creamos una regla para permitir conexión al puerto TCO 9870 (consola de gestión de almacenamiento HDFS) desde nuestra IP.
+ * default-allow-rdp (**<span style="color:red">Eliminar</span>**): Permite RDP (Remote Desktop Protocol) desde cualquier sitio. La eliminamos
+ * default-allow-ssh (**<span style="color:orange">Modificar</span>**): La modificaremos para permitir conexión solo desde nuestra IP. Para ello la establecemos en las IP origen editando la regla y poniendo \<nuestra-ipv4\>/32 (sólo nuestra IP).
+ * default-yarnweb-8088 (**<span style="color:green">Crear</span>**): Creamos una regla para permitir conexión al puerto TCP 8088 (consola de gestión de YARN) desde nuestra IP.
+ * default-hdfsweb-9870 (**<span style="color:green">Crear</span>**): Creamos una regla para permitir conexión al puerto TCO 9870 (consola de gestión de almacenamiento HDFS) desde nuestra IP.
 
 Tras todos estos pasos deberíamos ver algo así en la consola de gestión del firewall:
 
@@ -351,9 +351,9 @@ Y lo mismo con la gestión de **YARN** (ResourceManager:8088):
 
 
 
-#Parte 4: Contar palabras
+# Parte 4: Contar palabras
 
-####Subir archivo
+#### Subir archivo
 
 Para contar las palabras primero debemos subir el archivo al HDFS de google cloud.
 
@@ -369,7 +369,7 @@ Y elegimos el archivo generado en la "Parte 2" de scrapy. Tras terminar el proce
 
 <center><img src="./images/storage3.png" alt="drawing" width="750"/></center>
 
-####Lanzar tarea contado de palabras
+#### Lanzar tarea contado de palabras
 
 Tras subir el archivo, vamos a "Dataproc" -> "Tareas" para añadir una nueva tarea directamente desde la consola de gestión de google cloud:
 
