@@ -1,4 +1,4 @@
-#Practica Big Data Architecture
+# Practica Big Data Architecture
 
 Ignacio Gallegos Sánchez
 
