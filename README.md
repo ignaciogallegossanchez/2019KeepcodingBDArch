@@ -21,7 +21,7 @@ En la siguiente ilustración se muestra una arquitectura general de todos los el
 A continuación se explica lo arriba diseñado:
 
 
-###Fuentes de datos
+### Fuentes de datos
 
 En este caso tenemos varias fuentes de datos:
 
@@ -34,7 +34,7 @@ En este caso tenemos varias fuentes de datos:
 Para cada uno de éstos datos, podemos tener varios destinos. Por ejemplo podemos querer que un log de los webservers se almacenen para auditoría, pero adicionalmente se trate en tiempo real para detectar errores. Por ello se utiliza **Kafka** que es un sistema de colas (Pub/sub) de modo que tenemos varios *"publicadores"* y uno o varios *"subscriptores"* para cada tipo de mensaje. Kafka nos permite tener varios subscriptores para cada mensaje.
 
 
-###Procesamiento en streaming
+### Procesamiento en streaming
 
 De todos éstos datos, hay especialmente dos que nos interesa tratar en tiempo real por su naturaleza:
 
@@ -44,7 +44,7 @@ De todos éstos datos, hay especialmente dos que nos interesa tratar en tiempo r
 El tratamiento de datos en tiempo real se realizará con **Apache Storm**. Tras tatar los datos, se enviarán ya procesados a HDFS.
 
 
-###Procesamiento Batch
+### Procesamiento Batch
 
 A HDFS llegan datos desde varias fuentes:
 
@@ -63,7 +63,7 @@ TODOS estos datos se procesarán en modo Batch para enriquecer los datos de la b
 A los datos generados con todo este procesamiento se les dará una interfaz común de consulta SQL con **Hive** para que sistemas externos de la empresa así como otros departamento puedan obtener y consultar éstos datos.
 
 
-###Visualización 
+### Visualización 
 
 Los datos se exportarán a **ElasticSearch** para hacer consultas fácilmente por departamentos como por ejemplo MKT.
 Adicionalmente se mostrarán en un cuadro de mando los logs procesados en tiempo real por storm para departamentos como por ejemplo Q&A.
